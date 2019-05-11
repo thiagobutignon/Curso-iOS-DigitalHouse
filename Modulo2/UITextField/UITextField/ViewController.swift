@@ -33,6 +33,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.backgroundColor = .green
     }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldEndEditing")
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldBeginEditing")
+        return true
+    }
 
 }
 

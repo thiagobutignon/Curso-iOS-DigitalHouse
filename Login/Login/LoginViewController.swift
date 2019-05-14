@@ -8,33 +8,53 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailLabel: UITextField!
-    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         errorLabel.text = ""
     }
-    @IBAction func signUp(_ sender: UIButton) {
-        let emailIsCorrect = Validation.emailVerification(email: emailLabel.text ?? "")
-        if emailIsCorrect == true {
-            let user: User = User(email: emailLabel.text ?? "", password: passwordLabel.text ?? "")
-            let addUser: DataUsers = DataUsers()
-            addUser.users.append(user)
-            
-            dump(addUser.users)
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.isEqual(self.emailTextField) {
+            self.passwordTextField.becomeFirstResponder()
         } else {
-            print("email está incorreto")
+            self.passwordTextField.resignFirstResponder()
         }
-        
+        return true
     }
+    
+    func validate() {
+        do{
+            let email = try emailTextField.validatedText(validationType: ValidatorType.email)
+            let password = try passwordTextField.validatedText(validationType: ValidatorType.password)
+            let user: User = User(email: email, password: password)
+            let data: () = user.addUser(user: user)
+            save(data)
+            
+        } catch (let error) {
+            errorLabel.text = (error as! ValidationError).message
+        }
+    }
+    
+    func save(_ data: ()) {
+        errorLabel.text = "Email and password are registered!"
+    }
+    
+    
+    @IBAction func signUp(_ sender: UIButton) {
+        validate()
+    }
+    
+    
     
     @IBAction func signIn(_ sender: UIButton) {
     }

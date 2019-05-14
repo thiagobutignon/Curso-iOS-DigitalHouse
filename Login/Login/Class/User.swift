@@ -16,4 +16,9 @@ class User {
         self.email = email
         self.password = password
     }
+    
+    func addUser(user: User) {
+        var dataUsers = DataUsers()
+        return dataUsers.users.append(user)
+    }
 }

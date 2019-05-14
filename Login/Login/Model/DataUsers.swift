@@ -6,8 +6,9 @@
 //  Copyright © 2019 Thiago B Claramunt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class DataUsers {
+struct DataUsers {
     var users: [User] = []
 }
+

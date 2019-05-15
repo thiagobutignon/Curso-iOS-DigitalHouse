@@ -8,7 +8,11 @@
 
 import UIKit
 
-struct DataUsers {
-    var users: [User] = []
+struct DataUser {
+    var data: [User] = []
+}
+struct User {
+    var email: String
+    var password: String
 }
 

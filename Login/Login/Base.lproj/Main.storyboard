@@ -101,7 +101,6 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="appNameTitle" destination="BIk-jk-CuL" id="9dq-lx-41K"/>
                         <outlet property="emailTextField" destination="7oP-ld-DxS" id="8d0-pp-Psy"/>

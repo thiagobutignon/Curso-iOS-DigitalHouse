@@ -14,6 +14,9 @@
 		83BA16F8228E2162002495D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BA16F6228E2162002495D7 /* LaunchScreen.storyboard */; };
 		83BA1703228E2162002495D7 /* DesafioPerformSegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA1702228E2162002495D7 /* DesafioPerformSegueTests.swift */; };
 		83BA170E228E2162002495D7 /* DesafioPerformSegueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA170D228E2162002495D7 /* DesafioPerformSegueUITests.swift */; };
+		83BA171C228E2363002495D7 /* TiaLaureteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA171B228E2363002495D7 /* TiaLaureteViewController.swift */; };
+		83BA171E228E236A002495D7 /* MiriamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA171D228E236A002495D7 /* MiriamViewController.swift */; };
+		83BA1720228E236F002495D7 /* ThiagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BA171F228E236F002495D7 /* ThiagoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		83BA1709228E2162002495D7 /* DesafioPerformSegueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioPerformSegueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BA170D228E2162002495D7 /* DesafioPerformSegueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioPerformSegueUITests.swift; sourceTree = "<group>"; };
 		83BA170F228E2162002495D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83BA171B228E2363002495D7 /* TiaLaureteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiaLaureteViewController.swift; sourceTree = "<group>"; };
+		83BA171D228E236A002495D7 /* MiriamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiriamViewController.swift; sourceTree = "<group>"; };
+		83BA171F228E236F002495D7 /* ThiagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThiagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				83BA16ED228E2161002495D7 /* AppDelegate.swift */,
 				83BA16EF228E2161002495D7 /* ViewController.swift */,
 				83BA16F1228E2161002495D7 /* Main.storyboard */,
+				83BA171B228E2363002495D7 /* TiaLaureteViewController.swift */,
+				83BA171D228E236A002495D7 /* MiriamViewController.swift */,
+				83BA171F228E236F002495D7 /* ThiagoViewController.swift */,
 				83BA16F4228E2162002495D7 /* Assets.xcassets */,
 				83BA16F6228E2162002495D7 /* LaunchScreen.storyboard */,
 				83BA16F9228E2162002495D7 /* Info.plist */,
@@ -257,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BA16F0228E2161002495D7 /* ViewController.swift in Sources */,
+				83BA1720228E236F002495D7 /* ThiagoViewController.swift in Sources */,
 				83BA16EE228E2161002495D7 /* AppDelegate.swift in Sources */,
+				83BA171C228E2363002495D7 /* TiaLaureteViewController.swift in Sources */,
+				83BA171E228E236A002495D7 /* MiriamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

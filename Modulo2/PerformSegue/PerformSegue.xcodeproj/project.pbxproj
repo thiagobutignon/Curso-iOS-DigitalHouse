@@ -14,6 +14,7 @@
 		83B8ECCB228E187D00BDC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8ECC9228E187D00BDC1C3 /* LaunchScreen.storyboard */; };
 		83B8ECD6228E187D00BDC1C3 /* PerformSegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECD5228E187D00BDC1C3 /* PerformSegueTests.swift */; };
 		83B8ECE1228E187D00BDC1C3 /* PerformSegueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECE0228E187D00BDC1C3 /* PerformSegueUITests.swift */; };
+		83B8ECEF228E1BFB00BDC1C3 /* AmarelaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECEE228E1BFB00BDC1C3 /* AmarelaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		83B8ECDC228E187D00BDC1C3 /* PerformSegueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformSegueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8ECE0228E187D00BDC1C3 /* PerformSegueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformSegueUITests.swift; sourceTree = "<group>"; };
 		83B8ECE2228E187D00BDC1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83B8ECEE228E1BFB00BDC1C3 /* AmarelaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmarelaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				83B8ECC0228E187C00BDC1C3 /* AppDelegate.swift */,
 				83B8ECC2228E187C00BDC1C3 /* ViewController.swift */,
 				83B8ECC4228E187C00BDC1C3 /* Main.storyboard */,
+				83B8ECEE228E1BFB00BDC1C3 /* AmarelaViewController.swift */,
 				83B8ECC7228E187D00BDC1C3 /* Assets.xcassets */,
 				83B8ECC9228E187D00BDC1C3 /* LaunchScreen.storyboard */,
 				83B8ECCC228E187D00BDC1C3 /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				83B8ECC3228E187C00BDC1C3 /* ViewController.swift in Sources */,
 				83B8ECC1228E187C00BDC1C3 /* AppDelegate.swift in Sources */,
+				83B8ECEF228E1BFB00BDC1C3 /* AmarelaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

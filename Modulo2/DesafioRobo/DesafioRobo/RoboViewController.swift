@@ -10,10 +10,26 @@ import UIKit
 
 class RoboViewController: UIViewController {
 
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var corLabel: UILabel!
+    @IBOutlet weak var forcaLabel: UILabel!
+    
+    var nome: String = ""
+    var cor: String = ""
+    var forca: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nomeLabel.text = self.nome
+        self.corLabel.text = self.cor
+        self.forcaLabel.text = String(self.forca)
+        
     }
     
-
+    @IBAction func voltar(_ sender: Any) {
+        self.dismiss(animated: true)
+        
+    }
+    
 
 }

@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		83764035228E3F8000241B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764034228E3F8000241B28 /* AppDelegate.swift */; };
-		83764037228E3F8000241B28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764036228E3F8000241B28 /* ViewController.swift */; };
+		83764037228E3F8000241B28 /* CadastrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764036228E3F8000241B28 /* CadastrarViewController.swift */; };
 		8376403A228E3F8000241B28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83764038228E3F8000241B28 /* Main.storyboard */; };
 		8376403C228E3F8100241B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8376403B228E3F8100241B28 /* Assets.xcassets */; };
 		8376403F228E3F8100241B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8376403D228E3F8100241B28 /* LaunchScreen.storyboard */; };
 		8376404A228E3F8100241B28 /* DesafioRoboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764049228E3F8100241B28 /* DesafioRoboTests.swift */; };
 		83764055228E3F8100241B28 /* DesafioRoboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764054228E3F8100241B28 /* DesafioRoboUITests.swift */; };
+		83764063228E406B00241B28 /* RoboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764062228E406B00241B28 /* RoboViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		83764031228E3F8000241B28 /* DesafioRobo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioRobo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83764034228E3F8000241B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83764036228E3F8000241B28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83764036228E3F8000241B28 /* CadastrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastrarViewController.swift; sourceTree = "<group>"; };
 		83764039228E3F8000241B28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8376403B228E3F8100241B28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8376403E228E3F8100241B28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		83764050228E3F8100241B28 /* DesafioRoboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioRoboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83764054228E3F8100241B28 /* DesafioRoboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioRoboUITests.swift; sourceTree = "<group>"; };
 		83764056228E3F8100241B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83764062228E406B00241B28 /* RoboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				83764034228E3F8000241B28 /* AppDelegate.swift */,
-				83764036228E3F8000241B28 /* ViewController.swift */,
+				83764036228E3F8000241B28 /* CadastrarViewController.swift */,
+				83764062228E406B00241B28 /* RoboViewController.swift */,
 				83764038228E3F8000241B28 /* Main.storyboard */,
 				8376403B228E3F8100241B28 /* Assets.xcassets */,
 				8376403D228E3F8100241B28 /* LaunchScreen.storyboard */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83764037228E3F8000241B28 /* ViewController.swift in Sources */,
+				83764063228E406B00241B28 /* RoboViewController.swift in Sources */,
+				83764037228E3F8000241B28 /* CadastrarViewController.swift in Sources */,
 				83764035228E3F8000241B28 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

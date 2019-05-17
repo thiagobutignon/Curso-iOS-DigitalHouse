@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CadastrarViewController.swift
 //  DesafioRobo
 //
 //  Created by Thiago B Claramunt on 16/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CadastrarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

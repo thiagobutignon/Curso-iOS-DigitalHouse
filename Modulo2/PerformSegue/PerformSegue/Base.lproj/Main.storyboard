@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Próxima Tela"/>
                                 <connections>
-                                    <segue destination="Vfu-Em-MzJ" kind="show" id="BGE-IQ-Wtv"/>
+                                    <action selector="irParaTelaAmarela:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbk-JA-La5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5J-5v-GIp">
@@ -46,7 +46,7 @@
         <!--Amarela View Controller-->
         <scene sceneID="LFg-ec-n6L">
             <objects>
-                <viewController id="Vfu-Em-MzJ" customClass="AmarelaViewController" customModule="PerformSegue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AmarelaViewController" id="Vfu-Em-MzJ" customClass="AmarelaViewController" customModule="PerformSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5G-6F-pAP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

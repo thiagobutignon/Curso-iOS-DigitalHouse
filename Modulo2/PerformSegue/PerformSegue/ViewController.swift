@@ -15,6 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func irParaTelaAmarela(_ sender: UIButton) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let amarelaViewController = storyboard.instantiateViewController(withIdentifier: "AmarelaViewController") as? AmarelaViewController else   { return }
+        self.present(amarelaViewController, animated: true)
+        
+    }
+    
 }
 

@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Próxima Tela"/>
                                 <connections>
-                                    <action selector="irParaTelaAmarela:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbk-JA-La5"/>
+                                    <action selector="irParaTelaAmarela:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1c-8s-dkN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5J-5v-GIp">
@@ -38,6 +38,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="N5J-5v-GIp" id="4re-hq-h6I"/>
+                        <segue destination="Vfu-Em-MzJ" kind="showDetail" identifier="mostrarAmarelaViewController" id="P2V-Ij-4Yf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,17 +64,20 @@
                                     <action selector="voltarButton:" destination="Vfu-Em-MzJ" eventType="touchUpInside" id="6Y6-TG-zzJ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ylq-6g-wCa">
-                                <rect key="frame" x="61" y="268" width="253" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjC-9o-8AQ">
+                                <rect key="frame" x="61" y="215" width="265" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CKP-H6-hbG"/>
                     </view>
+                    <connections>
+                        <outlet property="nomeLabel" destination="fjC-9o-8AQ" id="vXo-Z8-KaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VG-ZI-G2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

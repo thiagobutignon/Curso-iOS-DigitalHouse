@@ -9,9 +9,12 @@
 import UIKit
 
 class AmarelaViewController: UIViewController {
-
+    var nome: String?
+    
+    @IBOutlet weak var nomeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nomeLabel.text = self.nome
     }
 
     @IBAction func voltarButton(_ sender: UIButton) {

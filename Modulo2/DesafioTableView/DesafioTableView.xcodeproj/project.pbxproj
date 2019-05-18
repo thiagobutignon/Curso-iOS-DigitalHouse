@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		83B8EC84228CDF6500BDC1C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8EC83228CDF6500BDC1C3 /* AppDelegate.swift */; };
-		83B8EC86228CDF6500BDC1C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8EC85228CDF6500BDC1C3 /* ViewController.swift */; };
+		83B8EC86228CDF6500BDC1C3 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8EC85228CDF6500BDC1C3 /* ChecklistViewController.swift */; };
 		83B8EC89228CDF6500BDC1C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8EC87228CDF6500BDC1C3 /* Main.storyboard */; };
 		83B8EC8B228CDF6600BDC1C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B8EC8A228CDF6600BDC1C3 /* Assets.xcassets */; };
 		83B8EC8E228CDF6600BDC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8EC8C228CDF6600BDC1C3 /* LaunchScreen.storyboard */; };
 		83B8EC99228CDF6600BDC1C3 /* DesafioTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8EC98228CDF6600BDC1C3 /* DesafioTableViewTests.swift */; };
 		83B8ECA4228CDF6600BDC1C3 /* DesafioTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECA3228CDF6600BDC1C3 /* DesafioTableViewUITests.swift */; };
-		83B8ECB3228E15E400BDC1C3 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECB2228E15E400BDC1C3 /* TextTableViewCell.swift */; };
+		83D3865F228EEF9E00F871BF /* Aluno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D3865E228EEF9E00F871BF /* Aluno.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		83B8EC80228CDF6500BDC1C3 /* DesafioTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8EC83228CDF6500BDC1C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83B8EC85228CDF6500BDC1C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83B8EC85228CDF6500BDC1C3 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		83B8EC88228CDF6500BDC1C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83B8EC8A228CDF6600BDC1C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B8EC8D228CDF6600BDC1C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		83B8EC9F228CDF6600BDC1C3 /* DesafioTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8ECA3228CDF6600BDC1C3 /* DesafioTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTableViewUITests.swift; sourceTree = "<group>"; };
 		83B8ECA5228CDF6600BDC1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83B8ECB2228E15E400BDC1C3 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		83D3865E228EEF9E00F871BF /* Aluno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aluno.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				83B8EC83228CDF6500BDC1C3 /* AppDelegate.swift */,
-				83B8EC85228CDF6500BDC1C3 /* ViewController.swift */,
+				83B8EC85228CDF6500BDC1C3 /* ChecklistViewController.swift */,
 				83B8EC87228CDF6500BDC1C3 /* Main.storyboard */,
+				83D3865E228EEF9E00F871BF /* Aluno.swift */,
 				83B8EC8A228CDF6600BDC1C3 /* Assets.xcassets */,
 				83B8EC8C228CDF6600BDC1C3 /* LaunchScreen.storyboard */,
 				83B8EC8F228CDF6600BDC1C3 /* Info.plist */,
-				83B8ECB1228E15D000BDC1C3 /* Cell */,
 			);
 			path = DesafioTableView;
 			sourceTree = "<group>";
@@ -126,14 +126,6 @@
 				83B8ECA5228CDF6600BDC1C3 /* Info.plist */,
 			);
 			path = DesafioTableViewUITests;
-			sourceTree = "<group>";
-		};
-		83B8ECB1228E15D000BDC1C3 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				83B8ECB2228E15E400BDC1C3 /* TextTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B8ECB3228E15E400BDC1C3 /* TextTableViewCell.swift in Sources */,
-				83B8EC86228CDF6500BDC1C3 /* ViewController.swift in Sources */,
+				83D3865F228EEF9E00F871BF /* Aluno.swift in Sources */,
+				83B8EC86228CDF6500BDC1C3 /* ChecklistViewController.swift in Sources */,
 				83B8EC84228CDF6500BDC1C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cashfly.com.br.DesafioTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cashfly.com.br.DesafioTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

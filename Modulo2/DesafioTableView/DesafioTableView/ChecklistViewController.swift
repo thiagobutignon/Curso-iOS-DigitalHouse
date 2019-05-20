@@ -21,6 +21,9 @@ class ChecklistViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    @IBAction func addItem(_ sender: Any) {
+        print("Added Item")
+    }
     
 }
 

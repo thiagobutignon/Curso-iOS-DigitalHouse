@@ -26,16 +26,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-DK-MuC">
-                                            <rect key="frame" x="20" y="9.9999999999999982" width="295" height="20.333333333333329"/>
+                                            <rect key="frame" x="20" y="10.000000000000002" width="295" height="30.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="N9E-DK-MuC" secondAttribute="bottom" priority="750" constant="10" id="E9a-Gu-x5u"/>
                                         <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="20" symbolic="YES" id="Lgl-nb-iXZ"/>
                                         <constraint firstAttribute="trailing" secondItem="N9E-DK-MuC" secondAttribute="trailing" constant="20" symbolic="YES" id="OEW-DX-t6n"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="top" constant="10" id="Syc-Wy-5ks"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="top" priority="750" constant="10" id="Syc-Wy-5ks"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

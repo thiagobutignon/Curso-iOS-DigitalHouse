@@ -16,6 +16,7 @@
 		83B8EC8E228CDF6600BDC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B8EC8C228CDF6600BDC1C3 /* LaunchScreen.storyboard */; };
 		83B8EC99228CDF6600BDC1C3 /* DesafioTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8EC98228CDF6600BDC1C3 /* DesafioTableViewTests.swift */; };
 		83B8ECA4228CDF6600BDC1C3 /* DesafioTableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8ECA3228CDF6600BDC1C3 /* DesafioTableViewUITests.swift */; };
+		83BC8E8C22934E1300DD2DAF /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BC8E8B22934E1300DD2DAF /* AddItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		83B8EC9F228CDF6600BDC1C3 /* DesafioTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B8ECA3228CDF6600BDC1C3 /* DesafioTableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTableViewUITests.swift; sourceTree = "<group>"; };
 		83B8ECA5228CDF6600BDC1C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83BC8E8B22934E1300DD2DAF /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				83B8EC83228CDF6500BDC1C3 /* AppDelegate.swift */,
 				83B8EC85228CDF6500BDC1C3 /* ChecklistViewController.swift */,
 				83B8EC87228CDF6500BDC1C3 /* Main.storyboard */,
+				83BC8E8B22934E1300DD2DAF /* AddItemTableViewController.swift */,
 				830038E922908EF7009F2DAA /* ChecklistItem.swift */,
 				830038EB2290988C009F2DAA /* TodoList.swift */,
 				83B8EC8A228CDF6600BDC1C3 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B8EC86228CDF6500BDC1C3 /* ChecklistViewController.swift in Sources */,
+				83BC8E8C22934E1300DD2DAF /* AddItemTableViewController.swift in Sources */,
 				83B8EC84228CDF6500BDC1C3 /* AppDelegate.swift in Sources */,
 				830038EA22908EF7009F2DAA /* ChecklistItem.swift in Sources */,
 				830038EC2290988C009F2DAA /* TodoList.swift in Sources */,

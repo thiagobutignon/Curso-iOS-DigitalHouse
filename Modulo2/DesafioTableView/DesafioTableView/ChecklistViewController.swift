@@ -18,7 +18,8 @@ class ChecklistViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
 }

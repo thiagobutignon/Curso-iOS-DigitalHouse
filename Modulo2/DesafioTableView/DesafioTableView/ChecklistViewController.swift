@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChecklistViewController: UIViewController {
+class ChecklistViewController: UITableViewController {
     
     var todoList: TodoList
     
@@ -22,20 +22,28 @@ class ChecklistViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     @IBAction func addItem(_ sender: Any) {
-        print("Added Item")
+        let newRowIndex = self.todoList.todos.count
+        _ = todoList.newTodo()
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        
     }
     
 }
 
-extension ChecklistViewController: UITableViewDataSource {
+// UITableViewDataSource
+extension ChecklistViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.todos.count
     }
 }
 
-extension ChecklistViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+// UITableViewDelegate
+
+extension ChecklistViewController {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListItem", for: indexPath)
         let item = todoList.todos[indexPath.row]
         configureText(for: cell, with: item)
@@ -44,7 +52,7 @@ extension ChecklistViewController: UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = tableView.cellForRow(at: indexPath) {
             let item = todoList.todos[indexPath.row]
@@ -61,9 +69,9 @@ extension ChecklistViewController: UITableViewDelegate {
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         
         if item.checked {
-            cell.accessoryType = .none
-        } else {
             cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
         }
         item.toggleChecked()
     }

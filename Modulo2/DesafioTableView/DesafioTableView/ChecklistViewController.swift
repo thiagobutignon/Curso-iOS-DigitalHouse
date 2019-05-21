@@ -93,6 +93,4 @@ extension ChecklistViewController: AddItemViewControllerDelegate {
     func addItemViewController(_ contreller: AddItemTableViewController, didFinishAdding item: ChecklistItem) {
         navigationController?.popViewController(animated: true)
     }
-    
-    
 }

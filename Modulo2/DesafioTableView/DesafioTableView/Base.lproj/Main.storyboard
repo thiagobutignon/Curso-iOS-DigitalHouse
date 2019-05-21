@@ -83,6 +83,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done:" destination="urC-4G-NFz" eventType="editingDidEndOnExit" id="orQ-fh-E5L"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -101,7 +104,7 @@
                                 <action selector="cancel:" destination="urC-4G-NFz" id="50n-15-u7n"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="I1a-h7-D1M">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="I1a-h7-D1M">
                             <connections>
                                 <action selector="done:" destination="urC-4G-NFz" id="2Lt-0v-2Nd"/>
                             </connections>
@@ -109,6 +112,8 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="addBarButton" destination="I1a-h7-D1M" id="CvN-kj-DSA"/>
+                        <outlet property="cancelBarButton" destination="7jc-7q-jSx" id="xE0-42-aYx"/>
                         <outlet property="textField" destination="oBZ-LG-I0p" id="VYE-gU-RTF"/>
                     </connections>
                 </tableViewController>

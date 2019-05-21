@@ -15,6 +15,7 @@ class AddItemTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
+        textField.delegate = self
     }
     
     
@@ -36,4 +37,12 @@ class AddItemTableViewController: UITableViewController {
         return nil
     }
 
+}
+
+extension AddItemTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("\(textField.text)")
+        return false
+    }
 }

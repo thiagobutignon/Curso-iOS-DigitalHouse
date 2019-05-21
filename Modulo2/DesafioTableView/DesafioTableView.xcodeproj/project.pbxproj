@@ -105,8 +105,8 @@
 			children = (
 				83B8EC83228CDF6500BDC1C3 /* AppDelegate.swift */,
 				83B8EC85228CDF6500BDC1C3 /* ChecklistViewController.swift */,
-				83B8EC87228CDF6500BDC1C3 /* Main.storyboard */,
 				83BC8E8B22934E1300DD2DAF /* AddItemTableViewController.swift */,
+				83B8EC87228CDF6500BDC1C3 /* Main.storyboard */,
 				830038E922908EF7009F2DAA /* ChecklistItem.swift */,
 				830038EB2290988C009F2DAA /* TodoList.swift */,
 				83B8EC8A228CDF6600BDC1C3 /* Assets.xcassets */,

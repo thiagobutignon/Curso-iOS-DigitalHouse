@@ -26,26 +26,31 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-DK-MuC">
-                                            <rect key="frame" x="20" y="10.000000000000002" width="267" height="30.666666666666671"/>
+                                            <rect key="frame" x="52" y="8.0000000000000018" width="267" height="30.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZq-2c-Bmz">
-                                            <rect key="frame" x="132" y="15" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZq-2c-Bmz">
+                                            <rect key="frame" x="9" y="13" width="15" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="N9E-DK-MuC" secondAttribute="bottom" priority="750" constant="10" id="E9a-Gu-x5u"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="20" symbolic="YES" id="Lgl-nb-iXZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="N9E-DK-MuC" secondAttribute="trailing" constant="20" symbolic="YES" id="OEW-DX-t6n"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="top" priority="750" constant="10" id="Syc-Wy-5ks"/>
+                                        <constraint firstAttribute="bottom" secondItem="N9E-DK-MuC" secondAttribute="bottom" priority="750" constant="11.999999999999993" id="E9a-Gu-x5u"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="52" id="Lgl-nb-iXZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="N9E-DK-MuC" secondAttribute="trailing" constant="-12" id="OEW-DX-t6n"/>
+                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="topMargin" constant="2" id="Qf2-cS-yRy"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="top" priority="750" constant="8" id="Syc-Wy-5ks"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pZq-2c-Bmz" secondAttribute="trailing" constant="8" symbolic="YES" id="V5Q-hw-eHV"/>
+                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="9" id="bhs-V7-Qcj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="urC-4G-NFz" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="CRg-Pd-Jrt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="727.20000000000005" y="0.0"/>
         </scene>
-        <!--Title-->
+        <!--Add Item-->
         <scene sceneID="vIL-7e-grN">
             <objects>
                 <tableViewController id="urC-4G-NFz" customClass="AddItemTableViewController" customModule="DesafioTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,13 +110,13 @@
                             <outlet property="delegate" destination="urC-4G-NFz" id="z1T-km-bCr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="KZ5-FM-rZl">
+                    <navigationItem key="navigationItem" title="Add Item" id="KZ5-FM-rZl">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7jc-7q-jSx">
                             <connections>
                                 <action selector="cancel:" destination="urC-4G-NFz" id="50n-15-u7n"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="I1a-h7-D1M">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="I1a-h7-D1M">
                             <connections>
                                 <action selector="done:" destination="urC-4G-NFz" id="2Lt-0v-2Nd"/>
                             </connections>
@@ -147,4 +152,7 @@
             <point key="canvasLocation" x="-215.19999999999999" y="0.0"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CRg-Pd-Jrt"/>
+    </inferredMetricsTieBreakers>
 </document>

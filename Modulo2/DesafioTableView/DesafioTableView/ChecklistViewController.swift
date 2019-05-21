@@ -21,28 +21,19 @@ class ChecklistViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
     }
+    
     @IBAction func addItem(_ sender: Any) {
         let newRowIndex = self.todoList.todos.count
         _ = todoList.newTodo()
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
-        
     }
-    
-}
-
-// UITableViewDataSource
-extension ChecklistViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.todos.count
     }
-}
-
-// UITableViewDelegate
-
-extension ChecklistViewController {
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListItem", for: indexPath)
         let item = todoList.todos[indexPath.row]
@@ -60,13 +51,13 @@ extension ChecklistViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-
-//    Esse metódo possibilita que apague um item da minha table view controller!
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         todoList.todos.remove(at: indexPath.row)
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
-//        tableView.reloadData()
+        //        tableView.reloadData()
     }
     
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
@@ -74,12 +65,17 @@ extension ChecklistViewController {
             label.text = item.text
         }
     }
+    
+    
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
-        
+        guard let checkmark = cell.viewWithTag(1001) as? UILabel else {
+            return
+        }
         if item.checked {
-            cell.accessoryType = .checkmark
+            checkmark.text = "√"
+            
         } else {
-            cell.accessoryType = .none
+            checkmark.text = ""
         }
         item.toggleChecked()
     }
@@ -89,6 +85,15 @@ extension ChecklistViewController {
         if segue.identifier == "AddItemSegue" {
             if let addItemViewController = segue.destination as? AddItemTableViewController {
                 addItemViewController.delegate = self
+                addItemViewController.todoList = todoList
+            }
+        } else if segue.identifier == "EditItemSegue" {
+            if let addItemViewController = segue.destination as? AddItemTableViewController {
+                if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                    let item = todoList.todos[indexPath.row]
+                    addItemViewController.itemToEdit = item
+                    addItemViewController.delegate = self
+                }
             }
         }
     }
@@ -99,13 +104,27 @@ extension ChecklistViewController: AddItemViewControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-    func addItemViewController(_ contreller: AddItemTableViewController, didFinishAdding item: ChecklistItem) {
+    
+    
+    
+    
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: ChecklistItem) {
         navigationController?.popViewController(animated: true)
-        let rowIndex = todoList.todos.count
-        todoList.todos.append(item)
+        let rowIndex = todoList.todos.count - 1
         let indexPath = IndexPath(row: rowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
         
     }
+    
+    func addItemViewController(_ controller: AddItemTableViewController, didFinishEditing item: ChecklistItem) {
+        if let index = todoList.todos.firstIndex(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

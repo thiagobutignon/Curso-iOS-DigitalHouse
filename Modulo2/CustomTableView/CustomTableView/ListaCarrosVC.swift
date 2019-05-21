@@ -10,6 +10,7 @@ import UIKit
 
 class ListaCarrosVC: UIViewController {
 
+    @IBOutlet weak var carrosTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

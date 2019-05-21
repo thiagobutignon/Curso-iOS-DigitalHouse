@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ListaCarrosVC.swift
 //  CustomTableView
 //
 //  Created by Thiago B Claramunt on 21/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListaCarrosVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

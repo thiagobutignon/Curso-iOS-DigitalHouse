@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		830878772294B15100C32121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878762294B15100C32121 /* AppDelegate.swift */; };
-		830878792294B15100C32121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878782294B15100C32121 /* ViewController.swift */; };
+		830878792294B15100C32121 /* ListaCarrosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878782294B15100C32121 /* ListaCarrosVC.swift */; };
 		8308787C2294B15100C32121 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8308787A2294B15100C32121 /* Main.storyboard */; };
 		8308787E2294B15200C32121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8308787D2294B15200C32121 /* Assets.xcassets */; };
 		830878812294B15200C32121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8308787F2294B15200C32121 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		830878732294B15100C32121 /* CustomTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		830878762294B15100C32121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		830878782294B15100C32121 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		830878782294B15100C32121 /* ListaCarrosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCarrosVC.swift; sourceTree = "<group>"; };
 		8308787B2294B15100C32121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8308787D2294B15200C32121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		830878802294B15200C32121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				830878762294B15100C32121 /* AppDelegate.swift */,
-				830878782294B15100C32121 /* ViewController.swift */,
+				830878782294B15100C32121 /* ListaCarrosVC.swift */,
 				8308787A2294B15100C32121 /* Main.storyboard */,
 				8308787D2294B15200C32121 /* Assets.xcassets */,
 				8308787F2294B15200C32121 /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830878792294B15100C32121 /* ViewController.swift in Sources */,
+				830878792294B15100C32121 /* ListaCarrosVC.swift in Sources */,
 				830878772294B15100C32121 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cashfly.com.br.CustomTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -460,7 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cashfly.com.br.CustomTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

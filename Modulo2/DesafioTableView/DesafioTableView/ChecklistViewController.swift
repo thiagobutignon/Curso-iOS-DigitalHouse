@@ -20,6 +20,13 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = editButtonItem
+        
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        tableView.setEditing(tableView.isEditing, animated: true)
     }
     
     @IBAction func addItem(_ sender: Any) {
@@ -29,6 +36,13 @@ class ChecklistViewController: UITableViewController {
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
+    
+    @IBAction func deleteItems(_ sender: Any) {
+        if let selectedRows = tableView.indexPathsForVisibleRows {
+            var items = [ChecklistItem]()
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.todos.count
@@ -47,6 +61,7 @@ class ChecklistViewController: UITableViewController {
         
         if let cell = tableView.cellForRow(at: indexPath) {
             let item = todoList.todos[indexPath.row]
+            item.toggleChecked()
             configureCheckmark(for: cell, with: item)
             tableView.deselectRow(at: indexPath, animated: true)
         }
@@ -60,24 +75,29 @@ class ChecklistViewController: UITableViewController {
         //        tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        todoList.move(item: todoList.todos[sourceIndexPath.row], to: destinationIndexPath.row)
+        tableView.reloadData()
+        
+    }
+    
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
-        if let label = cell.viewWithTag(1000) as? UILabel {
-            label.text = item.text
+        if let checkmarkCell = cell as? ChecklistTableViewCell {
+            checkmarkCell.todoTextLabel.text = item.text
         }
     }
     
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
-        guard let checkmark = cell.viewWithTag(1001) as? UILabel else {
+        guard let checkmarkCell = cell as? ChecklistTableViewCell else {
             return
         }
         if item.checked {
-            checkmark.text = "√"
+            checkmarkCell.checkmarkLabel.text = "√"
             
         } else {
-            checkmark.text = ""
+            checkmarkCell.checkmarkLabel.text = ""
         }
-        item.toggleChecked()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

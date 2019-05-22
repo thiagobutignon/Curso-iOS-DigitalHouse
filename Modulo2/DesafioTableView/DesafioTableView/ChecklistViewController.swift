@@ -39,7 +39,7 @@ class ChecklistViewController: UITableViewController {
     }
     
     @IBAction func deleteItems(_ sender: Any) {
-        if let selectedRows = tableView.indexPathsForVisibleRows {
+        if let selectedRows = tableView.indexPathsForSelectedRows {
             var items = [ChecklistItem]()
             for indexPath in selectedRows {
                 items.append(todoList.todos[indexPath.row])

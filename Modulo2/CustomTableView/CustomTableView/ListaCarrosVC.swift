@@ -42,6 +42,21 @@ extension ListaCarrosVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell: CarroTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarroTableViewCell", for: indexPath) as! CarroTableViewCell
+        
+        let carroSelecionado: Carro = CarroLista.init().listaCarros[indexPath.row]
+        
+        self.performSegue(withIdentifier: "DetalheVC", sender: carroSelecionado)
+        
+        dump(CarroLista.init().listaCarros[indexPath.row])
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc: DetalheVC? = segue.destination as? DetalheVC
+        
+        if let _vc = vc {
+            _vc.carro = sender as? Carro
+        }
+    }
     
 }

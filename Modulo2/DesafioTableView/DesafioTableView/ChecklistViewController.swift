@@ -94,6 +94,16 @@ class ChecklistViewController: UITableViewController {
             let item = items[indexPath.row]
             configureText(for: cell, with: item)
             configureCheckmark(for: cell, with: item)
+                switch priority {
+                case .high:
+                    cell.tintColor = UIColor(red:0.85, green:0.29, blue:0.34, alpha:1.0)
+                case .medium:
+                     cell.tintColor = UIColor(red:0.95, green:0.69, blue:0.37, alpha:1.0)
+                case .low:
+                     cell.tintColor = UIColor(red:0.67, green:0.75, blue:0.38, alpha:1.0)
+                case .no:
+                    cell.tintColor = UIColor(red:0.29, green:0.47, blue:0.55, alpha:1.0)
+                }
         }
         return cell
     }
@@ -192,6 +202,28 @@ class ChecklistViewController: UITableViewController {
             }
         }
         return title
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.white
+         (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        
+
+        
+        if let priority = priorityForSectionIndex(section) {
+            switch priority {
+            case .high:
+               (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor(red:0.85, green:0.29, blue:0.34, alpha:1.0)
+            case .medium:
+                (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor(red:0.95, green:0.69, blue:0.37, alpha:1.0)
+            case .low:
+                (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor(red:0.67, green:0.75, blue:0.38, alpha:1.0)
+            case .no:
+                (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor(red:0.29, green:0.47, blue:0.55, alpha:1.0)
+            }
+
+        }
+
     }
 }
 

@@ -48,8 +48,9 @@ class ChecklistViewController: UITableViewController {
             for indexPath in selectedRows {
                 if let priority = priorityForSectionIndex(indexPath.section) {
                     let todos = todoList.todoList(for: priority)
-                    let item = todos[indexPath.row]
-                    todoList.remove(items: item, from: priority, at: indexPath.row)
+                    let rowToDelete = indexPath.row > todos.count - 1 ? todos.count - 1 : indexPath.row
+                    let item = todos[rowToDelete]
+                    todoList.remove(items: item, from: priority, at: rowToDelete)
                 }
             }
             tableView.beginUpdates()
@@ -104,7 +105,10 @@ class ChecklistViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        //        todoList.move(item: todoList.todos[sourceIndexPath.row], to: destinationIndexPath.row)
+        if let srcPriority = priorityForSectionIndex(sourceIndexPath.section), let destinationPriority = priorityForSectionIndex(destinationIndexPath.section) {
+            let item = todoList.todoList(for: srcPriority)[sourceIndexPath.row]
+            todoList.move(item: item, from: srcPriority, at: sourceIndexPath.row, to: destinationPriority, at: destinationIndexPath.row)
+        }
         tableView.reloadData()
         
     }
@@ -139,7 +143,7 @@ class ChecklistViewController: UITableViewController {
             if let itemDetailViewController = segue.destination as? ItemDetailViewController {
                 if let cell = sender as? UITableViewCell,
                     let indexPath = tableView.indexPath(for: cell),
-                    let priority = priorityForSectionIndex(indexPath.row) {
+                    let priority = priorityForSectionIndex(indexPath.section) {
                     
                     let item = todoList.todoList(for: priority)[indexPath.row]
                     itemDetailViewController.itemToEdit = item
@@ -150,7 +154,24 @@ class ChecklistViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return TodoList.Priority.AllCases.count
+        return TodoList.Priority.allCases.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var title: String? = nil
+        if let priority = priorityForSectionIndex(section) {
+            switch priority {
+            case .high:
+                title = "High Priority Todos"
+            case .medium:
+                title = "Medium Priority Todos"
+            case .low:
+                title = "Low Priority Todos"
+            case .no:
+                title = "No Priority Todos"
+            }
+        }
+        return title
     }
 }
 
@@ -161,20 +182,25 @@ extension ChecklistViewController: AddItemDetailViewControllerDelegate {
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {
         navigationController?.popViewController(animated: true)
-        let rowIndex = todoList.todos.count - 1
-        let indexPath = IndexPath(row: rowIndex, section: 0)
+        let rowIndex = todoList.todoList(for: .medium).count - 1
+        let indexPath = IndexPath(row: rowIndex, section: TodoList.Priority.medium.rawValue)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
         
     }
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem) {
-        if let index = todoList.todos.firstIndex(of: item) {
-            let indexPath = IndexPath(row: index, section: 0)
-            if let cell = tableView.cellForRow(at: indexPath) {
-                configureText(for: cell, with: item)
+        
+        for priority in TodoList.Priority.allCases {
+            let currentList = todoList.todoList(for: priority)
+            if let index = currentList.firstIndex(of: item) {
+                let indexPath = IndexPath(row: index, section: priority.rawValue)
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    configureText(for: cell, with: item)
+                }
             }
         }
+
         navigationController?.popViewController(animated: true)
     }
     

@@ -25,27 +25,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="307" height="50.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-DK-MuC">
-                                            <rect key="frame" x="52" y="8.0000000000000018" width="267" height="30.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZq-2c-Bmz">
+                                            <rect key="frame" x="8" y="13.333333333333336" width="15" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZq-2c-Bmz">
-                                            <rect key="frame" x="9" y="13" width="15" height="24"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-DK-MuC">
+                                            <rect key="frame" x="30.999999999999996" y="15.333333333333334" width="41.666666666666657" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="N9E-DK-MuC" secondAttribute="bottom" priority="750" constant="11.999999999999993" id="E9a-Gu-x5u"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="52" id="Lgl-nb-iXZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="N9E-DK-MuC" secondAttribute="trailing" constant="-12" id="OEW-DX-t6n"/>
-                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="topMargin" constant="2" id="Qf2-cS-yRy"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="top" secondItem="itv-sE-gl3" secondAttribute="top" priority="750" constant="8" id="Syc-Wy-5ks"/>
-                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pZq-2c-Bmz" secondAttribute="trailing" constant="8" symbolic="YES" id="V5Q-hw-eHV"/>
-                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="9" id="bhs-V7-Qcj"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="leading" secondItem="pZq-2c-Bmz" secondAttribute="trailing" constant="8" id="4kw-rx-e10"/>
+                                        <constraint firstItem="N9E-DK-MuC" firstAttribute="centerY" secondItem="itv-sE-gl3" secondAttribute="centerY" id="5eW-dV-0rj"/>
+                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="leading" secondItem="itv-sE-gl3" secondAttribute="leading" constant="8" id="7Dj-T8-9yy"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="N9E-DK-MuC" secondAttribute="trailing" constant="20" symbolic="YES" id="EhI-H4-2Dg"/>
+                                        <constraint firstItem="pZq-2c-Bmz" firstAttribute="centerY" secondItem="itv-sE-gl3" secondAttribute="centerY" id="QBc-UT-Byq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -75,6 +73,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="AdQ-z5-gCW" id="fyO-em-ABg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WB-Ep-3Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,8 +13,31 @@ class ChecklistViewController: UITableViewController {
     var todoList: TodoList
     var tableData: [[ChecklistItem?]?]!
     
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = editButtonItem
+        tableView.allowsMultipleSelectionDuringEditing = true
+        self.deleteButton.tintColor = UIColor.clear
+        self.showDeleteButton()
+        
+    }
+    
+    private func showDeleteButton() {
+        if tableView.isEditing {
+            self.deleteButton.isEnabled = !self.deleteButton.isEnabled
+            self.deleteButton.tintColor = nil
+        } else {
+            self.deleteButton.isEnabled = !self.deleteButton.isEnabled
+            self.deleteButton.tintColor =  UIColor.clear
+        }
+    }
+    
     private func priorityForSectionIndex(_ index: Int) -> TodoList.Priority? {
         return TodoList.Priority(rawValue: index)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,16 +45,12 @@ class ChecklistViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.leftBarButtonItem = editButtonItem
-        tableView.allowsMultipleSelectionDuringEditing = true
-    }
+    
     
     override func setEditing(_ editing: Bool, animated: Bool) {
+        
         super.setEditing(editing, animated: true)
+        self.showDeleteButton()
         tableView.setEditing(tableView.isEditing, animated: true)
     }
     
@@ -125,7 +144,7 @@ class ChecklistViewController: UITableViewController {
             return
         }
         if item.checked {
-            checkmarkCell.checkmarkLabel.text = "√"
+            checkmarkCell.checkmarkLabel.text = "✅"
             
         } else {
             checkmarkCell.checkmarkLabel.text = ""
@@ -159,6 +178,7 @@ class ChecklistViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var title: String? = nil
+        
         if let priority = priorityForSectionIndex(section) {
             switch priority {
             case .high:
@@ -200,7 +220,7 @@ extension ChecklistViewController: AddItemDetailViewControllerDelegate {
                 }
             }
         }
-
+        
         navigationController?.popViewController(animated: true)
     }
     

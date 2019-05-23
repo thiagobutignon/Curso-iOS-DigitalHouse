@@ -49,7 +49,7 @@ extension ListaCarrosVC: UITableViewDataSource, UITableViewDelegate {
         
         self.performSegue(withIdentifier: "DetalheVC", sender: carroSelecionado)
         
-        dump(CarroLista.init().listaCarros[indexPath.row])
+      
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc: DetalheVC? = segue.destination as? DetalheVC

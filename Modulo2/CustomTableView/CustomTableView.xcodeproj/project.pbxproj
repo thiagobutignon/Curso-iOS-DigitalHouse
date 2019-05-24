@@ -17,9 +17,9 @@
 		830878A62294B45D00C32121 /* CarroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878A42294B45D00C32121 /* CarroTableViewCell.swift */; };
 		830878A72294B45D00C32121 /* CarroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830878A52294B45D00C32121 /* CarroTableViewCell.xib */; };
 		830878A92294CF7800C32121 /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878A82294CF7800C32121 /* Carro.swift */; };
-		830878AB2294D03A00C32121 /* CarroLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878AA2294D03A00C32121 /* CarroLista.swift */; };
 		830878AD2294D6E100C32121 /* DetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830878AC2294D6E100C32121 /* DetalheVC.swift */; };
 		836CAD9F229757960088DA83 /* CadastrarCarroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CAD9E229757960088DA83 /* CadastrarCarroViewController.swift */; };
+		836CADA1229769A30088DA83 /* CarroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836CADA0229769A30088DA83 /* CarroManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +56,9 @@
 		830878A42294B45D00C32121 /* CarroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroTableViewCell.swift; sourceTree = "<group>"; };
 		830878A52294B45D00C32121 /* CarroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarroTableViewCell.xib; sourceTree = "<group>"; };
 		830878A82294CF7800C32121 /* Carro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
-		830878AA2294D03A00C32121 /* CarroLista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroLista.swift; sourceTree = "<group>"; };
 		830878AC2294D6E100C32121 /* DetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVC.swift; sourceTree = "<group>"; };
 		836CAD9E229757960088DA83 /* CadastrarCarroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastrarCarroViewController.swift; sourceTree = "<group>"; };
+		836CADA0229769A30088DA83 /* CarroManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				8308787A2294B15100C32121 /* Main.storyboard */,
-				830878822294B15200C32121 /* Info.plist */,
 				836CAD9D2297577D0088DA83 /* CadastrarCarro */,
 				836CAD9B2297545F0088DA83 /* Resources */,
 				836CAD992297544F0088DA83 /* ListaDeCarros */,
@@ -141,7 +140,7 @@
 		836CAD98229754480088DA83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				830878AA2294D03A00C32121 /* CarroLista.swift */,
+				836CADA0229769A30088DA83 /* CarroManager.swift */,
 				830878A82294CF7800C32121 /* Carro.swift */,
 			);
 			path = Models;
@@ -161,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8308787F2294B15200C32121 /* LaunchScreen.storyboard */,
+				830878822294B15200C32121 /* Info.plist */,
 				8308787D2294B15200C32121 /* Assets.xcassets */,
 				830878762294B15100C32121 /* AppDelegate.swift */,
 			);
@@ -317,11 +317,11 @@
 			files = (
 				830878A62294B45D00C32121 /* CarroTableViewCell.swift in Sources */,
 				836CAD9F229757960088DA83 /* CadastrarCarroViewController.swift in Sources */,
-				830878AB2294D03A00C32121 /* CarroLista.swift in Sources */,
 				830878A92294CF7800C32121 /* Carro.swift in Sources */,
 				830878792294B15100C32121 /* ListaCarrosVC.swift in Sources */,
 				830878AD2294D6E100C32121 /* DetalheVC.swift in Sources */,
 				830878772294B15100C32121 /* AppDelegate.swift in Sources */,
+				836CADA1229769A30088DA83 /* CarroManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95Y9ZH46LB;
-				INFOPLIST_FILE = CustomTableView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomTableView/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95Y9ZH46LB;
-				INFOPLIST_FILE = CustomTableView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomTableView/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

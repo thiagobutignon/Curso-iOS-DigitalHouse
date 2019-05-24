@@ -8,10 +8,12 @@
 
 import Foundation
 
-class Carro {
-    var nome: String = ""
+struct Carro {
+    var nome: String
     var nomeImagem: String?
-    var ano: Int = 0
-    var km: Int = 0
-    var preco: Float = 0.0
+    var ano: Int
+    var km: Int
+    var preco: Float
+    
+    
 }

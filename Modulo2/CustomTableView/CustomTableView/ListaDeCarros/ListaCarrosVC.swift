@@ -9,18 +9,27 @@
 import UIKit
 
 class ListaCarrosVC: UIViewController {
-     let item = CarroLista()
+    var arrayCarros: [Carro] = []
     
     @IBOutlet weak var carrosTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         
         self.carrosTableView.register(UINib(nibName: "CarroTableViewCell", bundle: nil), forCellReuseIdentifier: "CarroTableViewCell")
         
         self.carrosTableView.delegate = self
         self.carrosTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.atualizaTabela()
+    }
+    
+    func atualizaTabela() {
+        self.arrayCarros = CarroManager.shared.getCarros()
+        carrosTableView.reloadData()
     }
 }
 
@@ -31,21 +40,30 @@ extension ListaCarrosVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.item.listaCarros.count
+        
+
+        return arrayCarros.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CarroTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarroTableViewCell", for: indexPath) as! CarroTableViewCell
         
-        cell.configCell(carro: CarroLista.init().listaCarros[indexPath.row])
-        
+        cell.configCell(carro: self.arrayCarros[indexPath.row])
+
         return cell
+
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            CarroManager.shared.deletaCarro(index: indexPath.row)
+             self.atualizaTabela()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell: CarroTableViewCell = tableView.dequeueReusableCell(withIdentifier: "CarroTableViewCell", for: indexPath) as! CarroTableViewCell
         
-        let carroSelecionado: Carro = CarroLista.init().listaCarros[indexPath.row]
+        let carroSelecionado: Carro = self.arrayCarros[indexPath.row]
         
         self.performSegue(withIdentifier: "DetalheVC", sender: carroSelecionado)
         

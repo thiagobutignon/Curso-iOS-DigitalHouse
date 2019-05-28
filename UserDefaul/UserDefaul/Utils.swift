@@ -10,21 +10,21 @@ import UIKit
 
 class Utils {
     
-    func saveStringObject(key: String, value: String) {
+    static func saveStringObject(key: String, value: String) {
         UserDefaults.standard.set(value, forKey: key)
     }
     
     
-    func getStringObject(key: String) -> String? {
+    static func getStringObject(key: String) -> String? {
         let value = UserDefaults.standard.string(forKey: key)
         return value
     }
     
-    func saveObject(key: String, value: Any) {
+    static func saveObject(key: String, value: Any) {
         UserDefaults.standard.set(value, forKey: key)
     }
     
-    func getObject(key: String) -> Any? {
+    static func getObject(key: String) -> Any? {
         let value = UserDefaults.standard.object(forKey: key)
         return value
     }

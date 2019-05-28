@@ -1,0 +1,6 @@
+framework module Pods_ReactiveStudy {
+  umbrella header "Pods-ReactiveStudy-umbrella.h"
+
+  export *
+  module * { export * }
+}

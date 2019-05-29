@@ -15,6 +15,7 @@
 		8308F8D2229DF50300885226 /* UserDefaulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308F8D1229DF50300885226 /* UserDefaulTests.swift */; };
 		8308F8DD229DF50300885226 /* UserDefaulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308F8DC229DF50300885226 /* UserDefaulUITests.swift */; };
 		8308F8EB229DF91600885226 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308F8EA229DF91600885226 /* Utils.swift */; };
+		8308F8ED229E0C9400885226 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308F8EC229E0C9400885226 /* SegmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8308F8DC229DF50300885226 /* UserDefaulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaulUITests.swift; sourceTree = "<group>"; };
 		8308F8DE229DF50300885226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8308F8EA229DF91600885226 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8308F8EC229E0C9400885226 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8308F8BC229DF50200885226 /* AppDelegate.swift */,
 				8308F8BE229DF50200885226 /* ViewController.swift */,
 				8308F8C0229DF50200885226 /* Main.storyboard */,
+				8308F8EC229E0C9400885226 /* SegmentViewController.swift */,
 				8308F8EA229DF91600885226 /* Utils.swift */,
 				8308F8C3229DF50300885226 /* Assets.xcassets */,
 				8308F8C5229DF50300885226 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8308F8ED229E0C9400885226 /* SegmentViewController.swift in Sources */,
 				8308F8BF229DF50200885226 /* ViewController.swift in Sources */,
 				8308F8BD229DF50200885226 /* AppDelegate.swift in Sources */,
 				8308F8EB229DF91600885226 /* Utils.swift in Sources */,

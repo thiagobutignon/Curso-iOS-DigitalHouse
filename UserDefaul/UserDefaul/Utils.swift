@@ -29,4 +29,23 @@ class Utils {
         return value
     }
     
+    static func saveDic(dic: [String: Any], key: String) {
+        UserDefaults.standard.set(dic, forKey: key)
+    }
+    
+    static func getDictionary(key: String) {
+        if let _dic = UserDefaults.standard.dictionary(forKey: key) {
+            print(_dic)
+        }
+    }
+    
+    static func dicionaryRepresatation () {
+        print(UserDefaults.standard.dictionaryRepresentation())
+    }
+    
+    static func removeForKey(key: String) {
+        UserDefaults.standard.removeObject(forKey: key)
+        print("---------removeForKey")
+    }
+    
 }

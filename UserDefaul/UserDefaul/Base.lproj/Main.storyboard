@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Segment View Controller-->
         <scene sceneID="MXP-1V-ih0">
             <objects>
-                <viewController id="PGe-Dg-LC4" sceneMemberID="viewController">
+                <viewController id="PGe-Dg-LC4" customClass="SegmentViewController" customModule="UserDefaul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AaA-Cw-2V3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,11 +70,25 @@
                                     <segment title="Amarelo"/>
                                     <segment title="Preto"/>
                                 </segments>
+                                <connections>
+                                    <action selector="colorPicker:" destination="PGe-Dg-LC4" eventType="valueChanged" id="xcr-J3-qRC"/>
+                                </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEk-tO-KKI">
+                                <rect key="frame" x="23" y="76" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="voltar:" destination="PGe-Dg-LC4" eventType="touchUpInside" id="uqz-hh-Svc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gET-ha-HKZ"/>
                     </view>
+                    <connections>
+                        <outlet property="colorSegmentController" destination="eWh-rd-CNH" id="cJQ-P1-Ccl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwG-Xn-Y66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

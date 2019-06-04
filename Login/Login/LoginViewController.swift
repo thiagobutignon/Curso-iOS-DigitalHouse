@@ -29,6 +29,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
         
         self.animate()
+        
+        
     }
     
     func animate() {
@@ -89,7 +91,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func login() {
         do {
-            let email = try emailTextField.validatedText(validationType: ValidatorType.email)
+            let email = try emailTextField.validatedText(validationType: ValidatorType.cpf)
             let password = try passwordTextField.validatedText(validationType: ValidatorType.password)
             let user: User = User(email: email, password: password)
             

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -17,19 +17,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Utils.getStringObject(key: "email") != nil {
-            emailTextField.text = Utils.getStringObject(key: "email")
-        } else {
-            emailTextField.text = ""
+        if let _email = Utils.getStringObject(key: "email") {
+            emailTextField.text = _email
+        }
+        
+        let dicionario: [String: Any] = ["cachorro":"thiago", "gato": 27]
+        Utils.saveDic(dic: dicionario, key: "meuDicionario")
+        let dic = Utils.getDictionary(key: "meuDicionario")
+        
+        if let cachorro = dic["cachorro"] as? String {
+            print(cachorro)
         }
     }
-
-
+    
+    
+    private func fazerLogin(senha: String) {
+        if self.passwordTextField.text ?? "" == senha {
+          self.performSegue(withIdentifier: "segmentViewController", sender: nil)
+        } else {
+            print("------- Deu Ruim senha incorreta!")
+        }
+    }
+    
     @IBAction func cadastrar(_ sender: UIButton) {
-        Utils.saveObject(key: "email", value: self.emailTextField.text ?? "")
-        Utils.saveObject(key: "password", value: self.passwordTextField.text ?? "")
         
-        performSegue(withIdentifier: "segmentViewController", sender: nil)
+        if let _password = Utils.getStringObject(key: "password") {
+            fazerLogin(senha: _password)
+        } else {
+            Utils.saveObject(key: "email", value: self.emailTextField.text ?? "")
+            Utils.saveObject(key: "password", value: self.passwordTextField.text ?? "")
+            
+            print(Utils.getStringObject(key: "password") ?? "")
+            print(Utils.getStringObject(key: "email") ?? "")
+            fazerLogin(senha: Utils.getStringObject(key: "password") ?? "")
+        }
     }
     
 }

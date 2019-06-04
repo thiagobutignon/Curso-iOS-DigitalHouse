@@ -33,10 +33,11 @@ class Utils {
         UserDefaults.standard.set(dic, forKey: key)
     }
     
-    static func getDictionary(key: String) {
-        if let _dic = UserDefaults.standard.dictionary(forKey: key) {
-            print(_dic)
+    static func getDictionary(key: String) -> [String: Any] {
+        if let dic = UserDefaults.standard.dictionary(forKey: key) {
+            return dic
         }
+        return [:]
     }
     
     static func dicionaryRepresatation () {

@@ -14,6 +14,8 @@
 		83086A6522A7329700888CA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83086A6322A7329700888CA3 /* LaunchScreen.storyboard */; };
 		83086A7022A7329700888CA3 /* CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83086A6F22A7329700888CA3 /* CollectionViewTests.swift */; };
 		83086A7B22A7329800888CA3 /* CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83086A7A22A7329800888CA3 /* CollectionViewUITests.swift */; };
+		83086A9022A7365500888CA3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83086A8E22A7365500888CA3 /* CustomCollectionViewCell.swift */; };
+		83086A9122A7365500888CA3 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83086A8F22A7365500888CA3 /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		83086A7622A7329700888CA3 /* CollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83086A7A22A7329800888CA3 /* CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUITests.swift; sourceTree = "<group>"; };
 		83086A7C22A7329800888CA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83086A8E22A7365500888CA3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		83086A8F22A7365500888CA3 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				83086A5A22A7329600888CA3 /* AppDelegate.swift */,
 				83086A5C22A7329600888CA3 /* ViewController.swift */,
+				83086A8E22A7365500888CA3 /* CustomCollectionViewCell.swift */,
+				83086A8F22A7365500888CA3 /* CustomCollectionViewCell.xib */,
 				83086A5E22A7329600888CA3 /* Main.storyboard */,
 				83086A6122A7329700888CA3 /* Assets.xcassets */,
 				83086A6322A7329700888CA3 /* LaunchScreen.storyboard */,
@@ -232,6 +238,7 @@
 				83086A6522A7329700888CA3 /* LaunchScreen.storyboard in Resources */,
 				83086A6222A7329700888CA3 /* Assets.xcassets in Resources */,
 				83086A6022A7329600888CA3 /* Main.storyboard in Resources */,
+				83086A9122A7365500888CA3 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83086A5D22A7329600888CA3 /* ViewController.swift in Sources */,
+				83086A9022A7365500888CA3 /* CustomCollectionViewCell.swift in Sources */,
 				83086A5B22A7329600888CA3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

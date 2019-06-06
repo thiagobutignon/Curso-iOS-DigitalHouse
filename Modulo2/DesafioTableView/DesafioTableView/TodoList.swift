@@ -37,7 +37,6 @@ class TodoList {
         addTodo(item: row2Item, for: .low)
         addTodo(item: row3Item, for: .no)
         addTodo(item: row4Item, for: .medium)
-
     }
     
     func addTodo(item: ChecklistItem, for priority: Priority, at index: Int = -1) {
@@ -84,9 +83,13 @@ class TodoList {
     
     func newTodo() -> ChecklistItem {
         let item: ChecklistItem = ChecklistItem()
+        
         item.text = randomTitle()
+        
         item.checked = true
+        
         mediumPriorityTodos.append(item)
+        
         return item
     }
     

@@ -208,8 +208,6 @@ class ChecklistViewController: UITableViewController {
         (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.white
          (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
         
-
-        
         if let priority = priorityForSectionIndex(section) {
             switch priority {
             case .high:
